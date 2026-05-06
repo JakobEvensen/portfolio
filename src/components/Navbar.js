@@ -2,13 +2,26 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <nav className="bg-white shadow-md fixed w-full z-50">
-      <div className="container mx-auto flex justify-between items-center p-4">
-        <h1 className="text-2xl font-bold">My Portfolio</h1>
-        <div className="space-x-6">
-          <a href="#projects" className="hover:text-blue-500">Projects</a>
-          <a href="#skills" className="hover:text-blue-500">Skills</a>
-          <a href="#contact" className="hover:text-blue-500">Contact</a>
+    <nav className="fixed inset-x-0 top-0 z-50 px-4 py-4 sm:px-8">
+      <div className="mx-auto flex max-w-7xl items-center justify-between border border-white/10 bg-[#070816]/70 px-4 py-3 shadow-2xl shadow-black/20 backdrop-blur-2xl">
+        <a href="#top" className="text-sm font-semibold uppercase tracking-[0.28em] text-white">
+          Jakob Evensen
+        </a>
+        <div className="hidden items-center gap-7 text-sm font-medium text-slate-300 md:flex">
+          <a href="#projects" className="transition hover:text-white">Projects</a>
+          <a href="#skills" className="transition hover:text-white">Skills</a>
+          <a href="#contact" className="transition hover:text-white">Contact</a>
+        </div>
+        <a
+          href="#contact"
+          className="border border-cyan-200/40 px-4 py-2 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-200 hover:text-slate-950"
+        >
+          Hire me
+        </a>
+        <div className="absolute left-4 right-4 top-full mt-2 flex justify-center gap-4 text-xs font-medium text-slate-300 md:hidden">
+          <a href="#projects" className="border border-white/10 bg-[#070816]/80 px-3 py-2 backdrop-blur-xl">Projects</a>
+          <a href="#skills" className="border border-white/10 bg-[#070816]/80 px-3 py-2 backdrop-blur-xl">Skills</a>
+          <a href="#contact" className="border border-white/10 bg-[#070816]/80 px-3 py-2 backdrop-blur-xl">Contact</a>
         </div>
       </div>
     </nav>

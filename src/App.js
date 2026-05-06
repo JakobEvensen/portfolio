@@ -8,12 +8,14 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="font-sans text-gray-900">
+    <div className="min-h-screen overflow-hidden bg-[#070816] font-sans text-slate-100 antialiased">
       <Navbar />
-      <Hero />
-      <Home />
-      <Skills />
-      <Contact />
+      <main>
+        <Hero />
+        <Home />
+        <Skills />
+        <Contact />
+      </main>
       <Footer />
     </div>
   );

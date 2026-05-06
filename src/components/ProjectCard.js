@@ -1,33 +1,87 @@
 import React from "react";
 
-const ProjectCard = ({ title, description, websiteLink, githubLink }) => {
+const ProjectCard = ({
+  title,
+  category,
+  year,
+  description,
+  impact,
+  stack,
+  websiteLink,
+  githubLink,
+  accent,
+  index,
+}) => {
   return (
-    <div className="bg-white shadow-lg rounded-xl p-6 hover:scale-105 transition-transform">
-      <h3 className="text-xl font-semibold mb-2">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <div className="flex gap-4">
-        {websiteLink && (
-          <a
-            href={websiteLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-500 hover:underline"
-          >
-            Live Site
-          </a>
-        )}
-        {githubLink && (
-          <a
-            href={githubLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-800 hover:underline"
-          >
-            GitHub
-          </a>
-        )}
+    <article className="group relative min-h-[520px] overflow-hidden border border-white/10 bg-white/[0.045] p-5 shadow-2xl shadow-black/30 backdrop-blur-xl transition duration-500 hover:-translate-y-2 hover:border-white/25">
+      <div className={`absolute inset-x-0 top-0 h-1 bg-gradient-to-r ${accent}`} />
+      <div className="absolute right-5 top-5 text-7xl font-semibold text-white/[0.035]">
+        0{index + 1}
       </div>
-    </div>
+      <div className="relative flex h-full flex-col">
+        <div className={`mb-8 h-56 overflow-hidden bg-gradient-to-br ${accent} p-px`}>
+          <div className="relative h-full overflow-hidden bg-[#090d1b]">
+            <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.16)_0,transparent_32%),radial-gradient(circle_at_72%_30%,rgba(255,255,255,0.26),transparent_24%)]" />
+            <div className="absolute inset-6 grid grid-cols-6 gap-2 opacity-80 transition duration-500 group-hover:scale-105">
+              {Array.from({ length: 24 }).map((_, itemIndex) => (
+                <span
+                  key={itemIndex}
+                  className={itemIndex % 5 === 0 ? "border border-white/10 bg-white/[0.18]" : "border border-white/10 bg-white/[0.07]"}
+                />
+              ))}
+            </div>
+            <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-950/70">Project</p>
+                <p className="mt-1 text-2xl font-semibold text-slate-950">{title}</p>
+              </div>
+              <span className="border border-slate-950/15 bg-slate-950/10 px-3 py-2 text-xs font-semibold text-slate-950">
+                {year}
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex items-center justify-between gap-4 text-sm text-slate-400">
+          <span>{category}</span>
+          <span>{year}</span>
+        </div>
+        <h3 className="mt-5 text-3xl font-semibold tracking-tight text-white">{title}</h3>
+        <p className="mt-4 leading-7 text-slate-300">{description}</p>
+        <p className="mt-4 border-l border-cyan-200/40 pl-4 text-sm leading-6 text-slate-400">{impact}</p>
+
+        <div className="mt-6 flex flex-wrap gap-2">
+          {stack.map((item) => (
+            <span key={item} className="border border-white/10 bg-white/[0.06] px-3 py-1.5 text-xs font-medium text-slate-300">
+              {item}
+            </span>
+          ))}
+        </div>
+
+        <div className="mt-auto flex flex-wrap gap-3 pt-8">
+          {websiteLink && (
+            <a
+              href={websiteLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center bg-white px-4 py-3 text-sm font-semibold text-slate-950 transition duration-300 hover:bg-cyan-200"
+            >
+              View live
+            </a>
+          )}
+          {githubLink && (
+            <a
+              href={githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center border border-white/15 px-4 py-3 text-sm font-semibold text-white transition duration-300 hover:border-white/40 hover:bg-white/10"
+            >
+              Source code
+            </a>
+          )}
+        </div>
+      </div>
+    </article>
   );
 };
 
