@@ -1,42 +1,26 @@
 import React from "react";
-
-const groups = [
-  {
-    title: "Frontend craft",
-    description: "Interfaces that feel fast, clear and intentional across devices.",
-    skills: ["React", "JavaScript", "Tailwind CSS", "HTML", "CSS", "Responsive UI"],
-  },
-  {
-    title: "Backend systems",
-    description: "Practical foundations for APIs, data handling and maintainable application logic.",
-    skills: ["Java", "Python", ".NET", "Spring Boot", "SQL", "System design"],
-  },
-  {
-    title: "Delivery mindset",
-    description: "Comfortable moving from idea to working product with structure and iteration.",
-    skills: ["Git", "Full-stack", "UX thinking", "Testing basics", "Documentation"],
-  },
-];
+import { skillGroups } from "../data/portfolio";
 
 const Skills = () => {
   return (
-    <section id="skills" className="bg-[#eef3f8] px-5 py-24 text-slate-950 sm:px-8 lg:px-12">
+    <section id="skills" className="relative bg-[#070816] px-5 py-24 text-slate-100 sm:px-8 lg:px-12">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(103,232,249,0.1),transparent_28%)]" />
       <div className="mx-auto max-w-7xl">
-        <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+        <div className="relative grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.32em] text-blue-700">Capabilities</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.32em] text-cyan-200">Capabilities</p>
             <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
-              A full-stack toolkit with a designer's eye for detail.
+              Technical areas I am building on.
             </h2>
           </div>
           <div className="grid gap-4 md:grid-cols-3">
-            {groups.map((group) => (
-              <div key={group.title} className="border border-slate-950/10 bg-white p-6 shadow-xl shadow-slate-200/60 transition duration-300 hover:-translate-y-1">
-                <h3 className="text-xl font-semibold">{group.title}</h3>
-                <p className="mt-3 text-sm leading-6 text-slate-600">{group.description}</p>
+            {skillGroups.map((group) => (
+              <div key={group.title} className="border border-white/10 bg-white/[0.045] p-6 shadow-2xl shadow-black/25 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-white/25">
+                <h3 className="text-xl font-semibold text-white">{group.title}</h3>
+                <p className="mt-3 text-sm leading-6 text-slate-400">{group.description}</p>
                 <div className="mt-6 flex flex-wrap gap-2">
                   {group.skills.map((skill) => (
-                    <span key={skill} className="bg-slate-100 px-3 py-1.5 text-xs font-semibold text-slate-700">
+                    <span key={skill} className="border border-white/10 bg-white/[0.06] px-3 py-1.5 text-xs font-medium text-slate-300">
                       {skill}
                     </span>
                   ))}
