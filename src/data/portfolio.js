@@ -1,6 +1,6 @@
 export const profile = {
   name: "Jakob Evensen",
-  role: "Currently | Information technology student at OsloMet",
+  role: "Currently | IT-student at OsloMet",
   headline: "Jakob Evensen",
   intro:
     "I am building a strong foundation in software development, system development, databases and cloud technologies with a focus on continuous learning and growth.",
