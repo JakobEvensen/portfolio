@@ -11,6 +11,7 @@ const ProjectCard = ({
   githubLink,
   accessNote,
   accent,
+  slug,
   index,
 }) => {
   return (
@@ -37,6 +38,12 @@ const ProjectCard = ({
         </div>
 
         <div className="mt-auto flex flex-wrap gap-3 pt-8">
+          <a
+            href={`#project/${slug}`}
+            className="inline-flex items-center bg-cyan-300 px-4 py-3 text-sm font-semibold text-slate-950 transition duration-300 hover:bg-white"
+          >
+            View details
+          </a>
           {websiteLink && (
             <a
               href={websiteLink}

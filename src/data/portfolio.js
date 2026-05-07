@@ -17,10 +17,11 @@ export const heroStats = [
 export const projects = [
   {
     title: "Amesto Aces Customer Portal",
+    slug: "amesto-aces-customer-portal",
     category: "Bachelor's project / Full-stack development",
     year: "2026",
     description:
-      "A customer portal for Amesto Aces built to present candidates in a more professional and structured way for business customers. A bachelor’s project developed in collaboration with three other students.",
+      "A customer portal for Amesto Aces built to present candidates in a more professional and structured way for business customers. A bachelor's project developed in collaboration with three other students.",
     impact:
       "Gained experience in full-stack development, user experience design, and collaborative project management.",
     stack: [".NET", "C#", "Deployment", "Collaboration", "Group project"],
@@ -28,22 +29,82 @@ export const projects = [
     githubLink: "",
     accessNote: "Code and live access are private due to confidentiality.",
     accent: "from-emerald-300 to-teal-500",
+    details: {
+      overview:
+        "This project was developed as a bachelor's project in collaboration with Amesto Aces. The goal was to explore how a customer portal could make candidate presentation more structured, professional and useful for business customers.",
+      role:
+        "I contributed as part of a student team, working across planning, frontend implementation, user experience decisions and project coordination. Since this was a real client context, part of the work also involved understanding expectations, communicating clearly and shaping the solution around actual needs.",
+      learned:
+        "I learned more about working in a team on a larger project, translating customer needs into practical features, planning development work and understanding how frontend, backend and deployment choices fit together in a full solution.",
+      challenges:
+        "A key challenge was balancing ambition with the time and scope of a bachelor project, especially while working with a real company context and confidentiality limitations.",
+      improvements:
+        "If I continued the project, I would focus on improving the candidate presentation flow, strengthening user feedback loops and refining the technical structure for long-term maintainability.",
+      screenshots: [
+        {
+          src: "/project-images/amestoLanding.png",
+          alt: "Amesto Aces landing page",
+          caption: "Initial landing page for the customer portal.",
+        },
+        {
+          src: "/project-images/amestoCandidate.png",
+          alt: "Candidate profile view",
+          caption: "View for presenting individual candidate information.",
+        },
+        {
+          src: "/project-images/amestoPlanning_1.png",
+          alt: "Planning view",
+          caption: "Initial planning and design phase for the customer portal using Figma.",
+        },
+        {
+          src: "/project-images/amestoPlanning_2.png",
+          alt: "Planning view",
+          caption: "Further planning and design iterations for the customer portal using Figma.",
+        },
+      ],
+    },
   },
   {
     title: "Cypher Translator",
+    slug: "cypher-translator",
     category: "Utility / coursework tool",
     year: "2025",
     description:
-      "A encoder and decoder for classical ciphers, created to get a clean, ad-free tool for coursework and repeat use.",
+      "An encoder and decoder for classical ciphers, created to get a clean, ad-free tool for coursework and repeat use.",
     impact:
       "A recurring challenge during studying turned into a practical tool while practicing structure, logic and deployment.",
     stack: ["React", "JavaScript", "Deployment", "Problem solving"],
     websiteLink: "https://ciphertranslator.netlify.app",
     githubLink: "https://github.com/JakobEvensen/cipher-translator.git",
     accent: "from-cyan-300 to-blue-500",
+    details: {
+      overview:
+        "Cypher Translator started as a practical study tool. I wanted a simple place to encode and decode classical ciphers without ads, clutter or unnecessary friction.",
+      role:
+        "I built the project independently, including the interface, cipher logic, testing through manual examples and deployment.",
+      learned:
+        "I practiced quickly developing a tool to solve a specific problem. ",
+      challenges:
+        "The main challenge was making the UI flexible enough for different ciphers while keeping the user experience as simple and straightforward as possible.",
+      improvements:
+        "Future improvements could include more cipher types, clearer examples, better validation and a small explanation section for how each cipher works.",
+      screenshots: [
+        {
+          src: "/project-images/caesarCipher.png",
+          alt: "Caesar cipher interface",
+          caption: "Logic for encoding and decoding Caesar ciphers.",
+        },
+        {
+          src: "/project-images/vigenereCipher.png",
+          alt: "Vigenère cipher interface",
+          caption: "Logic for encoding and decoding Vigenère ciphers.",
+        },
+      ],
+    },
   },
   {
     title: "UnionPizza.no",
+    slug: "unionpizza",
     category: "Course project / systems practice",
     year: "2025",
     description:
@@ -54,8 +115,20 @@ export const projects = [
     websiteLink: "https://unionpizza.no",
     githubLink: "https://github.com",
     accent: "from-emerald-300 to-teal-500",
+    details: {
+      overview:
+        "UnionPizza.no was a course project built around a real restaurant context. The project focused on presenting key information clearly and understanding what customers would need from the solution.",
+      role:
+        "I worked this project alone so i did everyting from planning to coding every individual line. I also gained exposure to how a broader full-stack solution could be planned.",
+      learned:
+        "I learned more about understanding customer needs, planning a project, making design decisions for real users and connecting frontend work to a broader system idea.",
+      challenges:
+        "One challenge was deciding what the project should include and what should be left out. We explored an ordering system, but the scope changed due to in-store hardware limitations so the final work focused more on presentation and customer information.",
+      improvements:
+        "If I revisited the project, I would improve the content structure, polish the mobile experience and make the project scope clearer from the beginning.",
+      screenshots: [],
+    },
   },
-  
 ];
 
 export const skillGroups = [
@@ -111,7 +184,7 @@ export const contact = {
   linkedin: "https://www.linkedin.com/in/jakob-evensen-27229529b",
   location: "Oslo / Drammen, Norway",
   focus: "Software development, systems, databases and cloud computing",
-  headline: "Looking for a developer who’s curious, driven, and ready to grow?",
+  headline: "Looking for a developer who's curious, driven, and ready to grow?",
   pitch:
     "I am open to internships, junior developer opportunities and technical environments where I can keep growing across software engineering, systems and cloud computing.",
 };
