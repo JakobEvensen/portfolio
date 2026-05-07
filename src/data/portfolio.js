@@ -33,7 +33,7 @@ export const projects = [
       overview:
         "This project was developed as a bachelor's project in collaboration with Amesto Aces. The goal was to explore how a customer portal could make candidate presentation more structured, professional and useful for business customers.",
       role:
-        "I contributed as part of a student team, working across planning, frontend implementation, user experience decisions and project coordination. Since this was a real client context, part of the work also involved understanding expectations, communicating clearly and shaping the solution around actual needs.",
+        "I contributed as part of a student team where we worked together on planning, user testing and shaping the solution around real client needs. My main technical contribution was backend API development and database work.",
       learned:
         "I learned more about working in a team on a larger project, translating customer needs into practical features, planning development work and understanding how frontend, backend and deployment choices fit together in a full solution.",
       challenges:
@@ -46,11 +46,7 @@ export const projects = [
           alt: "Amesto Aces landing page",
           caption: "Initial landing page for the customer portal.",
         },
-        {
-          src: "/project-images/amestoCandidate.png",
-          alt: "Candidate profile view",
-          caption: "View for presenting individual candidate information.",
-        },
+        
         {
           src: "/project-images/amestoPlanning_1.png",
           alt: "Planning view",
@@ -60,6 +56,11 @@ export const projects = [
           src: "/project-images/amestoPlanning_2.png",
           alt: "Planning view",
           caption: "Further planning and design iterations for the customer portal using Figma.",
+        },
+        {
+          src: "/project-images/amestoFlowchart.png",
+          alt: "Admin flowchart",
+          caption: "Flowchart outlining the admin user flow for managing candidates and customer interactions.",
         },
       ],
     },
